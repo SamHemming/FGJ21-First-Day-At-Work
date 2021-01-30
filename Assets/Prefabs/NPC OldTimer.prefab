@@ -111,7 +111,7 @@ PrefabInstance:
     - target: {fileID: 1322389194762059733, guid: 750b6ae500243a14e9419fa9609f68aa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.08
+      value: 5.13
       objectReference: {fileID: 0}
     - target: {fileID: 1322389194762059733, guid: 750b6ae500243a14e9419fa9609f68aa,
         type: 3}
@@ -165,6 +165,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1322389194762059735, guid: 750b6ae500243a14e9419fa9609f68aa,
         type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322389194762059735, guid: 750b6ae500243a14e9419fa9609f68aa,
+        type: 3}
       propertyPath: dialog
       value: "Oh, I haven\u2019t seen ya here before, sonny!\r\nWell, get used to
         this face, I\u2019m the most forgetful person there is. *laughs* *coughs*\r\nBut
@@ -212,7 +217,7 @@ PrefabInstance:
     - target: {fileID: 1322389194762059735, guid: 750b6ae500243a14e9419fa9609f68aa,
         type: 3}
       propertyPath: timePerDialogLine
-      value: 0.5
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1322389194762059735, guid: 750b6ae500243a14e9419fa9609f68aa,
         type: 3}
@@ -414,6 +419,31 @@ PrefabInstance:
       propertyPath: successdDalogAudio.Array.data[2]
       value: 
       objectReference: {fileID: 8300000, guid: 2f84ed6b180b75149940c140204e51a0, type: 3}
+    - target: {fileID: 1322389194762059735, guid: 750b6ae500243a14e9419fa9609f68aa,
+        type: 3}
+      propertyPath: OnDone.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322389194762059735, guid: 750b6ae500243a14e9419fa9609f68aa,
+        type: 3}
+      propertyPath: OnDone.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322389194762059735, guid: 750b6ae500243a14e9419fa9609f68aa,
+        type: 3}
+      propertyPath: OnDone.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322389194762059735, guid: 750b6ae500243a14e9419fa9609f68aa,
+        type: 3}
+      propertyPath: OnDone.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NPCDone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322389194762059735, guid: 750b6ae500243a14e9419fa9609f68aa,
+        type: 3}
+      propertyPath: OnDone.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 750b6ae500243a14e9419fa9609f68aa, type: 3}
 --- !u!1 &2963421097349514828 stripped

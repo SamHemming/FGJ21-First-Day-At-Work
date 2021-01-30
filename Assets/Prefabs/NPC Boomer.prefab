@@ -1,0 +1,268 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &955796478783394530
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2963421097349514828, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: m_Name
+      value: Boomer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialog
+      value: "I\u2019m in a hurry, boy, and you need to find my glasses.\r\nThey\u2019re
+        thick rimmed with big lenses.\r\nBlack, if that helps any.\r\n\u2026 Young
+        man, I need my glasses right away or I won\u2019t be able to drive home.\r\nWhat
+        will you do then? Pay for my cab?\r\nI\u2019m blind as a bat without them.\r\n(Sighs)
+        I can\u2019t believe I left them at the cash register.\r\n\u2026Oh, you have
+        trouble with your eyesight too?\r\nWell, I feel you. \r\nI can barely see
+        anything without my glasses.\r\nOf course, it\u2019s not the same as you.\r\nI
+        guess I\u2019m not in that big of a hurry, so you can take a little longer.\r\nBut
+        young sir, I do have to get home to take my medication on time.\r\n\u2026I
+        do appreciate that you\u2019re still doing your best.\r\nI want you to know
+        that it\u2019s enough.\r\nBut unfortunately I have to go.\r\nDon\u2019t worry,
+        I\u2019ll get myself my own cab.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialogPanel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: speakerText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: characterName
+      value: Boomer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: successDialog
+      value: "Oh! Thank you, young man.\r\nYou truly are a hard-working individual.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: wrongItemDialog
+      value: "I\u2019m sorry, young man, but that isn\u2019t mine.\r\nWhat was I
+        talking about..?\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: timePerDialogLine
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialogAudio.Array.size
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialogAudio.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a5e9626b987ccc46b459d000961f594, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialogAudio.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: b6c0589116a4645479b109f4ec400600, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialogAudio.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 50f16d06de1f724428718b26281808a0, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialogAudio.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7eb837cfcc271a74a9578961fcdc18ae, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialogAudio.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 60d9b2d106d2ea544b8895222f05070e, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialogAudio.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2dbbd8abee1ac4544892ddd285acff3e, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialogAudio.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ab4cf5aee773944d8b9ad5215044bb4, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialogAudio.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 324e99f0fd4ac21499a5ce49440dddd7, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialogAudio.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1f91beaaf1c52444e9165b6e59216482, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialogAudio.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: af8301c0c62df3e46abe2cd885a5ca38, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialogAudio.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: aa67385644d1723418a49e30ca392e27, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialogAudio.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: 28d1dcd6b403e864aa1c350b735848c6, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialogAudio.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: fac892135fa97c3478a43308b4f0195f, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialogAudio.Array.data[13]
+      value: 
+      objectReference: {fileID: 8300000, guid: 99ed50f10c788a140b96d18d80cc541a, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialogAudio.Array.data[14]
+      value: 
+      objectReference: {fileID: 8300000, guid: c1f0dc2d0ecf6bf4dacb88a3550ee369, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialogAudio.Array.data[15]
+      value: 
+      objectReference: {fileID: 8300000, guid: 935f3eb074093e64d902e9a6ec05e09a, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: dialogAudio.Array.data[16]
+      value: 
+      objectReference: {fileID: 8300000, guid: c6f0fd94ddc8db541808a257f56c85db, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: wrongDialogAudio.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: successdDalogAudio.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: wrongDialogAudio.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 89248054efb48414fb9cd78852468f35, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: wrongDialogAudio.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: b8da036fd49e65e4987f8a8944a24669, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: successdDalogAudio.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4b6dd8b38708cf040a37f5406ac7e6e8, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: successdDalogAudio.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7b830e62bf25649488c978b97769e219, type: 3}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: OnDone.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514830, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514830, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.11642933
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514830, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514831, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514831, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514831, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514831, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514831, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514831, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514831, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514831, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514831, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514831, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514831, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f2d87225a6866149958c0333ad83c92, type: 3}

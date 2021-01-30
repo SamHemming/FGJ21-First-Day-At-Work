@@ -14,16 +14,20 @@ public class NPCHandler : MonoBehaviour
 
 	private void Start()
 	{
-		npcList[0].YourTurn();
+		npcList[0].transform.position = spawnPos.position;
+		npcList[0].Go(transform.position);
 	}
 
+	private bool toggle = false;
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (!collision.CompareTag("Player"))
 			return;
 
-		if(true) //TODO: Player has correct item
+
+
+		if(toggle) //TODO: Player has correct item
 		{
 			npcList[currentNPC].CorrectItem();
 		}
@@ -31,6 +35,8 @@ public class NPCHandler : MonoBehaviour
 		{
 			npcList[currentNPC].WrongItem();
 		}
+
+		toggle = !toggle;
 	}
 
 	public void NPCDone()
@@ -41,7 +47,6 @@ public class NPCHandler : MonoBehaviour
 		if (npcList.Count > currentNPC)
 		{
 			npcList[currentNPC].transform.position = spawnPos.position;
-			npcList[currentNPC].YourTurn();
 			npcList[currentNPC].Go(transform.position);
 		}
 		else

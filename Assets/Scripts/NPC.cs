@@ -74,6 +74,7 @@ public class NPC : MonoBehaviour
 
 	IEnumerator Talk(List<(string, AudioClip)> list, int startIndex, bool isMainDialog = false)
 	{
+		dialogPanel.position = Vector3Int.FloorToInt(Camera.main.WorldToScreenPoint(this.transform.position)) + (Vector3Int)dialogPanelOffset;
 		speakerText.text = characterName;
 
 		for(int i = startIndex; i < list.Count; ++i)
@@ -81,12 +82,15 @@ public class NPC : MonoBehaviour
 			if(isMainDialog) whereWasI = i;
 			dialogText.text = list[i].Item1;
 
-			if(list[i].Item2 != null)
+			if (list[i].Item2 != null)
+			{
 				audioSource.PlayOneShot(list[i].Item2);
+				yield return new WaitForSecondsRealtime(list[i].Item2.length + timePerDialogLine);
+			}
 
-			yield return new WaitForSecondsRealtime(list[i].Item2.length + timePerDialogLine);
 		}
 
+		dialogPanel.position = new Vector3Int(10000, 10000, 0);
 		DoneTalking();
 	}
 
@@ -94,15 +98,12 @@ public class NPC : MonoBehaviour
 	IEnumerator MoveToPosition(Vector3 pos)
 	{
 
-		Debug.Log("MoveToPosStart");
-
-		while ((pos - transform.position).sqrMagnitude > .1f)
+		while (Vector3.Distance(pos, transform.position) > .1f)
 		{
 			yield return null;
 
 			var dir = pos - transform.position;
-
-			transform.position = (dir.magnitude > speed * Time.deltaTime) ? dir.normalized * speed * Time.deltaTime : pos;
+			transform.position += (dir.magnitude > speed * Time.deltaTime) ? dir.normalized * speed * Time.deltaTime : pos;
 		}
 
 		DoneMoving();
@@ -123,7 +124,7 @@ public class NPC : MonoBehaviour
 	{
 		Debug.Log("DoneMoving");
 		if (whereWasI < dialogList.Count - 1)
-			talk = StartCoroutine(Talk(dialogList, whereWasI, true));
+			YourTurn();
 		else
 			this.enabled = false;
 	}
@@ -136,14 +137,14 @@ public class NPC : MonoBehaviour
 	}
 
 
-	//Publics-----------------------------------------------------
-
-	public void YourTurn()
+	private void YourTurn()
 	{
-		dialogPanel.position = Vector3Int.FloorToInt(Camera.main.WorldToScreenPoint(this.transform.position)) + (Vector3Int)dialogPanelOffset;
-
+		Debug.Log("YourTurn");
 		talk = StartCoroutine(Talk(dialogList, 0, true));
 	}
+
+
+	//Publics-----------------------------------------------------
 
 	public void WrongItem()
 	{
