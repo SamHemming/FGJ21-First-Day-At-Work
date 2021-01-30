@@ -12,7 +12,7 @@ public class NPCHandler : MonoBehaviour
 	[SerializeField] private Transform despawnPos;
 
 
-	private void Start()
+	public void Start()
 	{
 		npcList[0].transform.position = spawnPos.position;
 		npcList[0].Go(transform.position);
