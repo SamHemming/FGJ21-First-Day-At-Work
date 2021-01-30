@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemHolder : MonoBehaviour
 {
     public string heldItem;
+    public bool holdingItem;
     void Start()
     {
 

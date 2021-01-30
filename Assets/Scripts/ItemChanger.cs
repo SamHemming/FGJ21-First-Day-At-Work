@@ -28,6 +28,7 @@ public class ItemChanger : MonoBehaviour
         if(thisItem == "pöytä")
         {
             deskText.SetActive(true);
+            playerItemHolder.holdingItem = true;
         }
 
         if(thisItem == "pallo")
