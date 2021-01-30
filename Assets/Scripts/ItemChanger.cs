@@ -7,6 +7,8 @@ public class ItemChanger : MonoBehaviour
     public string newHeldItem;
     public string thisItem;
     public ItemHolder playerItemHolder;
+    public GameObject ballText;
+    public GameObject deskText;
     void Start()
     {
         
@@ -22,6 +24,17 @@ public class ItemChanger : MonoBehaviour
         {
             playerItemHolder = player.GetComponent<ItemHolder>();
         }
+
+        if(thisItem == "pöytä")
+        {
+            deskText.SetActive(true);
+            playerItemHolder.holdingItem = true;
+        }
+
+        if(thisItem == "pallo")
+        {
+            ballText.SetActive(true);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D player)
@@ -29,8 +42,18 @@ public class ItemChanger : MonoBehaviour
         if(Input.GetKey(KeyCode.Space) && player.CompareTag("Player"))
         {
             playerItemHolder.ChangeHeldItem(thisItem);
+            CloseTexts();
         }
     }
 
+    private void OnTriggerExit2D(Collider2D player)
+    {
+        CloseTexts();
+    }
 
+    private void CloseTexts()
+    {
+        ballText.SetActive(false);
+        deskText.SetActive(false);
+    }
 }
