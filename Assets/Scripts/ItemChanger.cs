@@ -2,9 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CircleCollider2D))]
 public class ItemChanger : MonoBehaviour
 {
-    public string newHeldItem;
+	public string itemName;
+	[TextArea] public string itemDescription;
+	public Sprite itemSprite;
+	public AudioClip itemSound;
+
+	/*
+	public string newHeldItem;
     public string thisItem;
     public ItemHolder playerItemHolder;
     public GameObject ballText;
@@ -55,5 +62,5 @@ public class ItemChanger : MonoBehaviour
     {
         ballText.SetActive(false);
         deskText.SetActive(false);
-    }
+    }*/
 }
