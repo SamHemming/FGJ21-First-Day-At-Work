@@ -35,12 +35,18 @@ public class NPCHandler : MonoBehaviour
 
 	public void NPCDone()
 	{
-		currentNPC++;
+		npcList[currentNPC].Go(despawnPos.position);
+		++currentNPC;
 
-		if(npcList.Count > currentNPC)
+		if (npcList.Count > currentNPC)
+		{
+			npcList[currentNPC].transform.position = spawnPos.position;
 			npcList[currentNPC].YourTurn();
+			npcList[currentNPC].Go(transform.position);
+		}
 		else
 		{
+			Debug.Log("You WIN!!!");
 			//TODO: you win?
 		}
 	}

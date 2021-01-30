@@ -36,10 +36,9 @@ public class NPC : MonoBehaviour
 	private Coroutine talk;
 	private int whereWasI = 0;
 	private AudioSource audioSource;
-	private bool isTalking = false;
+
+
 	[SerializeField] private UnityEngine.Events.UnityEvent OnDone;
-
-
 	[SerializeField] private Vector2Int dialogPanelOffset = Vector2Int.zero;
 
 
@@ -73,18 +72,13 @@ public class NPC : MonoBehaviour
 	}
 
 
-	IEnumerator Talk(List<(string, AudioClip)> list, int startIndex)
+	IEnumerator Talk(List<(string, AudioClip)> list, int startIndex, bool isMainDialog = false)
 	{
-		if (isTalking)
-			yield return null;
-
-		isTalking = true;
-
 		speakerText.text = characterName;
 
 		for(int i = startIndex; i < list.Count; ++i)
 		{
-			whereWasI = i;
+			if(isMainDialog) whereWasI = i;
 			dialogText.text = list[i].Item1;
 
 			if(list[i].Item2 != null)
@@ -93,28 +87,51 @@ public class NPC : MonoBehaviour
 			yield return new WaitForSecondsRealtime(list[i].Item2.length + timePerDialogLine);
 		}
 
-		isTalking = false;
+		DoneTalking();
 	}
 
 
-	IEnumerator MoveToPosition(Vector2 pos)
+	IEnumerator MoveToPosition(Vector3 pos)
 	{
-		while(!Vector2.Equals(transform.position, pos))
+
+		Debug.Log("MoveToPosStart");
+
+		while ((pos - transform.position).sqrMagnitude > .1f)
 		{
 			yield return null;
 
-			var dir = pos - (Vector2)transform.position;
+			var dir = pos - transform.position;
 
 			transform.position = (dir.magnitude > speed * Time.deltaTime) ? dir.normalized * speed * Time.deltaTime : pos;
 		}
 
-		Done();
+		DoneMoving();
+	}
+
+
+	private void DoneTalking()
+	{
+		Debug.Log("DoneTalking");
+		if (whereWasI < dialogList.Count - 1)
+			talk = StartCoroutine(Talk(dialogList, whereWasI, true));
+		else
+			Done();
+	}
+
+
+	private void DoneMoving()
+	{
+		Debug.Log("DoneMoving");
+		if (whereWasI < dialogList.Count - 1)
+			talk = StartCoroutine(Talk(dialogList, whereWasI, true));
+		else
+			this.enabled = false;
 	}
 
 
 	private void Done()
 	{
-
+		Debug.Log("Done");
 		OnDone.Invoke();
 	}
 
@@ -125,29 +142,29 @@ public class NPC : MonoBehaviour
 	{
 		dialogPanel.position = Vector3Int.FloorToInt(Camera.main.WorldToScreenPoint(this.transform.position)) + (Vector3Int)dialogPanelOffset;
 
-		talk = StartCoroutine(Talk(dialogList, 0));
+		talk = StartCoroutine(Talk(dialogList, 0, true));
 	}
 
 	public void WrongItem()
 	{
 		StopCoroutine(talk);
 		audioSource.Stop();
-		isTalking = false;
 
 		StartCoroutine(Talk(wrongItemDialogList, 0));
-		talk = StartCoroutine(Talk(dialogList, whereWasI));
+		
 	}
 
 	public void CorrectItem()
 	{
 		StopAllCoroutines();
 		audioSource.Stop();
-		isTalking = false;
+
+		whereWasI = 1000; //Larger then dialog list, I hope O.O'
 
 		StartCoroutine(Talk(successDialogList, 0));
 	}
 
-	public void Go(Vector2 pos)
+	public void Go(Vector3 pos)
 	{
 		StartCoroutine(MoveToPosition(pos));
 	}

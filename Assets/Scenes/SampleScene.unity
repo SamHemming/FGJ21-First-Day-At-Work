@@ -564,6 +564,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 435234015001908358, guid: 19ae879236160944dbf5d443eb052c59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4603728506723955412, guid: 19ae879236160944dbf5d443eb052c59,
         type: 3}
       propertyPath: npcList.Array.data[0]
@@ -577,7 +582,7 @@ PrefabInstance:
     - target: {fileID: 4603728506723955413, guid: 19ae879236160944dbf5d443eb052c59,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.3
+      value: 5.07
       objectReference: {fileID: 0}
     - target: {fileID: 4603728506723955413, guid: 19ae879236160944dbf5d443eb052c59,
         type: 3}
@@ -629,10 +634,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC Handler
       objectReference: {fileID: 0}
-    - target: {fileID: 4603728506723955414, guid: 19ae879236160944dbf5d443eb052c59,
+    - target: {fileID: 4603728506723955415, guid: 19ae879236160944dbf5d443eb052c59,
         type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      propertyPath: m_Size.x
+      value: 1.8246515
+      objectReference: {fileID: 0}
+    - target: {fileID: 4603728506723955415, guid: 19ae879236160944dbf5d443eb052c59,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.9700727
+      objectReference: {fileID: 0}
+    - target: {fileID: 4603728506723955415, guid: 19ae879236160944dbf5d443eb052c59,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.41232574
+      objectReference: {fileID: 0}
+    - target: {fileID: 4603728506723955415, guid: 19ae879236160944dbf5d443eb052c59,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.16730356
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19ae879236160944dbf5d443eb052c59, type: 3}
