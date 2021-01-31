@@ -37,6 +37,7 @@ public class NPC : MonoBehaviour
 	private Coroutine talk;
 	private int whereWasI = 0;
 	private AudioSource audioSource;
+	private bool isMoving = false;
 
 
 	[SerializeField] private UnityEngine.Events.UnityEvent OnDone;
@@ -100,7 +101,7 @@ public class NPC : MonoBehaviour
 
 	IEnumerator MoveToPosition(Vector3 pos)
 	{
-
+		isMoving = true;
 		while (Vector3.Distance(pos, transform.position) > .1f)
 		{
 			yield return null;
@@ -125,6 +126,7 @@ public class NPC : MonoBehaviour
 
 	private void DoneMoving()
 	{
+		isMoving = false;
 		Debug.Log("DoneMoving");
 		if (whereWasI < dialogList.Count - 1)
 			YourTurn();
@@ -151,7 +153,10 @@ public class NPC : MonoBehaviour
 
 	public void WrongItem()
 	{
-		StopCoroutine(talk);
+		if (isMoving)
+			return;
+
+		StopAllCoroutines();
 		audioSource.Stop();
 
 		StartCoroutine(Talk(wrongItemDialogList, 0));
@@ -160,6 +165,8 @@ public class NPC : MonoBehaviour
 
 	public void CorrectItem()
 	{
+		if (isMoving)
+			return;
 		StopAllCoroutines();
 		audioSource.Stop();
 

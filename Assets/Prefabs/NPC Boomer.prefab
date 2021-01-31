@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
         type: 3}
       propertyPath: speed
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
         type: 3}
@@ -32,6 +32,11 @@ PrefabInstance:
         do appreciate that you\u2019re still doing your best.\r\nI want you to know
         that it\u2019s enough.\r\nBut unfortunately I have to go.\r\nDon\u2019t worry,
         I\u2019ll get myself my own cab.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: itemName
+      value: Glasses
       objectReference: {fileID: 0}
     - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
         type: 3}
@@ -67,7 +72,7 @@ PrefabInstance:
     - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
         type: 3}
       propertyPath: timePerDialogLine
-      value: 0.5
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
         type: 3}
@@ -196,18 +201,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2963421097349514830, guid: 8f2d87225a6866149958c0333ad83c92,
         type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0ed1368b874cd204d93eb096cfaad3ab,
+        type: 3}
+    - target: {fileID: 2963421097349514830, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2963421097349514830, guid: 8f2d87225a6866149958c0333ad83c92,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.11642933
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2963421097349514830, guid: 8f2d87225a6866149958c0333ad83c92,
         type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2963421097349514831, guid: 8f2d87225a6866149958c0333ad83c92,
         type: 3}
@@ -217,12 +228,12 @@ PrefabInstance:
     - target: {fileID: 2963421097349514831, guid: 8f2d87225a6866149958c0333ad83c92,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.48
+      value: 4.7
       objectReference: {fileID: 0}
     - target: {fileID: 2963421097349514831, guid: 8f2d87225a6866149958c0333ad83c92,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.65
+      value: 7.55
       objectReference: {fileID: 0}
     - target: {fileID: 2963421097349514831, guid: 8f2d87225a6866149958c0333ad83c92,
         type: 3}

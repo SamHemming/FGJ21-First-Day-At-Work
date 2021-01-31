@@ -7,6 +7,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2622084667479594156, guid: 470ebbd23d80fd644ae1d93074b80f18,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f3a828bef2ec20e49a97f5a7ec85bb55,
+        type: 3}
     - target: {fileID: 2622084667479594157, guid: 470ebbd23d80fd644ae1d93074b80f18,
         type: 3}
       propertyPath: m_RootOrder
@@ -15,12 +21,12 @@ PrefabInstance:
     - target: {fileID: 2622084667479594157, guid: 470ebbd23d80fd644ae1d93074b80f18,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.48
+      value: 6.86
       objectReference: {fileID: 0}
     - target: {fileID: 2622084667479594157, guid: 470ebbd23d80fd644ae1d93074b80f18,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.65
+      value: 7.61
       objectReference: {fileID: 0}
     - target: {fileID: 2622084667479594157, guid: 470ebbd23d80fd644ae1d93074b80f18,
         type: 3}
@@ -80,6 +86,11 @@ PrefabInstance:
         manager.\r\n1\u2026\r\n2\u2026\r\n3\u2026\r\n4\u2026\r\n5\u2026\r\nI\u2019m
         not seeing my umbrella.\r\nMark my words!\r\nYour manager will hear about
         this!\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622084667479594159, guid: 470ebbd23d80fd644ae1d93074b80f18,
+        type: 3}
+      propertyPath: itemName
+      value: Umbrella
       objectReference: {fileID: 0}
     - target: {fileID: 2622084667479594159, guid: 470ebbd23d80fd644ae1d93074b80f18,
         type: 3}
@@ -226,22 +237,22 @@ PrefabInstance:
         type: 3}
       propertyPath: wrongDialogAudio.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 9a9ce9f36ce78d6488cbd1042537e238, type: 3}
+      objectReference: {fileID: 8300000, guid: e40ad1edb87264b4295a9a2ed8c3e156, type: 3}
     - target: {fileID: 2622084667479594159, guid: 470ebbd23d80fd644ae1d93074b80f18,
         type: 3}
       propertyPath: wrongDialogAudio.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: a6727ab388bc65c4c9475737a8595c75, type: 3}
+      objectReference: {fileID: 8300000, guid: aca70770658895248aa0256056082428, type: 3}
     - target: {fileID: 2622084667479594159, guid: 470ebbd23d80fd644ae1d93074b80f18,
         type: 3}
       propertyPath: wrongDialogAudio.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: 12041ec8efd25b143a2cff5b20de39c1, type: 3}
+      objectReference: {fileID: 8300000, guid: 87c67cdd5160f8942906472988ba912b, type: 3}
     - target: {fileID: 2622084667479594159, guid: 470ebbd23d80fd644ae1d93074b80f18,
         type: 3}
       propertyPath: successdDalogAudio.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 98b3eab1a0b73ad40aae5ad508faafcb, type: 3}
+      objectReference: {fileID: 8300000, guid: 0bd7f9938d2268d48bdd86ed056c5d0f, type: 3}
     - target: {fileID: 2622084667479594159, guid: 470ebbd23d80fd644ae1d93074b80f18,
         type: 3}
       propertyPath: OnDone.m_PersistentCalls.m_Calls.Array.data[0].m_Target

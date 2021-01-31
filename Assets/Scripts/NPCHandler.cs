@@ -7,12 +7,33 @@ public class NPCHandler : MonoBehaviour
 	[SerializeField] private List<NPC> npcList;
 	private int currentNPC = 0;
 
+	private int customerSatisfaction = 10;
 
 	[SerializeField] private Transform spawnPos;
 	[SerializeField] private Transform despawnPos;
+	[SerializeField] private UnityEngine.UI.Text score;
+	[SerializeField] private UnityEngine.UI.Image fired;
 
+	public UnityEngine.Events.UnityEvent OnLose;
 
-	public void Start()
+	private void UpdateScore(int value)
+	{
+		score.text = $"Customer Satisfaction: {value}";
+
+		if(customerSatisfaction <= 0)
+		{
+			StartCoroutine(DelayEnd(2));
+		}
+	}
+
+	IEnumerator DelayEnd(float delay)
+	{
+		yield return new WaitForSecondsRealtime(delay);
+		fired.gameObject.SetActive(true);
+		OnLose.Invoke();
+	}
+
+	public void StartShit()
 	{
 		npcList[0].transform.position = spawnPos.position;
 		npcList[0].Go(transform.position);
@@ -36,6 +57,7 @@ public class NPCHandler : MonoBehaviour
 		else
 		{
 			npcList[currentNPC].WrongItem();
+			UpdateScore(--customerSatisfaction);
 		}
 	}
 
@@ -51,8 +73,7 @@ public class NPCHandler : MonoBehaviour
 		}
 		else
 		{
-			Debug.Log("You WIN!!!");
-			//TODO: you win?
+			FindObjectOfType<ProtagonistVoice>().PlayEnd();
 		}
 	}
 }

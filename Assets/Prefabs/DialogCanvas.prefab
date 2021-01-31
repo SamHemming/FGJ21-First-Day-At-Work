@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -7.37, y: 43.05}
-  m_SizeDelta: {x: 175.2649, y: 48.052856}
+  m_AnchoredPosition: {x: -7.370117, y: 43.050003}
+  m_SizeDelta: {x: 201.9, y: 52.4}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &545139681
 CanvasRenderer:
@@ -152,7 +152,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The Speaker
+  m_Text: 
 --- !u!1 &1198640471695892968
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,11 +187,11 @@ RectTransform:
   m_Father: {fileID: 1198640472399483779}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 548.68, y: 543}
-  m_SizeDelta: {x: 416.31888, y: 60}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -243.48999, y: -70.25}
+  m_SizeDelta: {x: 485.7, y: 161.3}
+  m_Pivot: {x: 1, y: 1}
 --- !u!222 &1198640471695892967
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -306,8 +306,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Well, get used to this face, I\u2019m the most forgetful person there
-    is.\r"
+  m_Text: 
 --- !u!1 &1198640472399483783
 GameObject:
   m_ObjectHideFlags: 0
