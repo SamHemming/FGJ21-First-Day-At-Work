@@ -7,7 +7,7 @@ public class SceneChanger : MonoBehaviour
 {
 	public void GotoMenu()
 	{
-		SceneManager.LoadScene("MainMenuScene");
+		SceneManager.LoadScene("mainmenuscene");
 	}
 
 	public void GotoGame()
@@ -22,7 +22,7 @@ public class SceneChanger : MonoBehaviour
 
 	public void GotoMenuDelayed()
 	{
-		StartCoroutine(Delayed(5, "MainMenuScene"));
+		StartCoroutine(Delayed(5, "mainmenuscene"));
 	}
 
 	IEnumerator Delayed(float delay, string sceneName)
