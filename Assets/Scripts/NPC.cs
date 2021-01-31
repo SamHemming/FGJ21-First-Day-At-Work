@@ -11,6 +11,7 @@ public class NPC : MonoBehaviour
 	[SerializeField] private float speed = 1;
 	[SerializeField] private float timePerDialogLine = 5f;
 	[SerializeField] private string characterName = "defaultName";
+	public string itemName = "defaultItem";
 
 
 	[SerializeField] private List<AudioClip> dialogAudio;
@@ -23,7 +24,7 @@ public class NPC : MonoBehaviour
 	[SerializeField, TextArea] private string wrongItemDialog;
 
 
-	[SerializeField] private RectTransform dialogPanel;
+	//[SerializeField] private RectTransform dialogPanel;
 	[SerializeField] private UnityEngine.UI.Text dialogText;
 	[SerializeField] private UnityEngine.UI.Text speakerText;
 	
@@ -74,7 +75,7 @@ public class NPC : MonoBehaviour
 
 	IEnumerator Talk(List<(string, AudioClip)> list, int startIndex, bool isMainDialog = false)
 	{
-		dialogPanel.position = Vector3Int.FloorToInt(Camera.main.WorldToScreenPoint(this.transform.position)) + (Vector3Int)dialogPanelOffset;
+		//dialogPanel.position = Vector3Int.FloorToInt(Camera.main.WorldToScreenPoint(this.transform.position)) + (Vector3Int)dialogPanelOffset;
 		speakerText.text = characterName;
 
 		for(int i = startIndex; i < list.Count; ++i)
@@ -90,7 +91,9 @@ public class NPC : MonoBehaviour
 
 		}
 
-		dialogPanel.position = new Vector3Int(10000, 10000, 0);
+		//dialogPanel.position = new Vector3Int(10000, 10000, 0);
+		speakerText.text = "";
+		dialogText.text = "";
 		DoneTalking();
 	}
 

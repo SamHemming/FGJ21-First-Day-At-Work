@@ -18,25 +18,25 @@ public class NPCHandler : MonoBehaviour
 		npcList[0].Go(transform.position);
 	}
 
-	private bool toggle = false;
-
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (!collision.CompareTag("Player"))
 			return;
 
+		var player = collision.GetComponent<ItemHolder>();
 
+		if (!player.holdingItem)
+			return;
 
-		if(toggle) //TODO: Player has correct item
+		if(string.Equals(npcList[currentNPC].itemName, player.itemName))
 		{
+			player.ClearHand();
 			npcList[currentNPC].CorrectItem();
 		}
-		else //Twas wrong item
+		else
 		{
 			npcList[currentNPC].WrongItem();
 		}
-
-		toggle = !toggle;
 	}
 
 	public void NPCDone()

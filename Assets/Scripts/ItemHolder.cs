@@ -5,49 +5,81 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class ItemHolder : MonoBehaviour
 {
-    private bool holdingItem;
+    public bool holdingItem = false;
 	private string itemDescription;
-	private string itemName;
+	public string itemName = ""; // <= IS PUBLIC NOW!
 	private AudioClip itemSound;
 	private Sprite itemSprite;
 	private AudioSource audioSource;
 
+	private Collider2D collision;
+
 	[SerializeField] private SpriteRenderer spriteRend;
 	[SerializeField] private UnityEngine.UI.Text itemText;
+
+	private Transform spriteTrans;
 
 	private void Start()
 	{
 		audioSource = GetComponent<AudioSource>();
+		spriteTrans = spriteRend.GetComponent<Transform>();
 	}
 
-	public void ChangeHeldItem(string newHeldItem)
-    {
-        itemName = newHeldItem;
-    }
-
-	private void OnTriggerStay2D(Collider2D collision)
+	private void Update()
 	{
-		if (collision.CompareTag("Item"))
+		if (!collision)
+			return;
+
+		if (!collision.CompareTag("Item"))
+			return;
+
+		if (Input.GetButtonDown("Jump"))
 		{
-			if (Input.GetButtonDown("Jump"))
+			var itemChanger = collision.GetComponent<ItemChanger>();
+
+			if (itemName != "" && !itemChanger.itemName.Equals(itemName))
+				return;
+
+			if (itemChanger.isTake)
 			{
-				if(holdingItem)
+				if (itemChanger.itemName.Equals(itemName))
 				{
-					ClearHand();
+					// Yes sagettiaa :_DDD
 				}
-				else
-				{
-					PickUpItem(collision.GetComponent<ItemChanger>());
-				}
+				else return;
+			}
+
+
+			if (holdingItem)
+			{
+				ClearHand();
+				itemChanger.ToggleVisibility(true);
+				itemChanger.isTake = false;
+			}
+			else
+			{
+				PickUpItem(itemChanger);
+				itemChanger.ToggleVisibility(false);
+				itemChanger.isTake = true;
 			}
 		}
 	}
 
-	private void ClearHand()
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		this.collision = collision;
+	}
+
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+		this.collision = null;
+	}
+	
+	public void ClearHand()
 	{
 		holdingItem = false;
 
-		itemName = null;
+		itemName = "";
 		itemSprite = null;
 		itemDescription = null;
 		itemSound = null;
@@ -67,6 +99,7 @@ public class ItemHolder : MonoBehaviour
 
 		audioSource.PlayOneShot(itemSound);
 		spriteRend.sprite = itemSprite;
+		spriteTrans.localScale = item.transform.localScale * (1/.3f);
 		itemText.text = itemDescription;
 	}
 }
