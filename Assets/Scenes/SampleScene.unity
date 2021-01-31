@@ -1063,9 +1063,39 @@ PrefabInstance:
       objectReference: {fileID: 1101931620}
     - target: {fileID: 2622084667479594159, guid: 470ebbd23d80fd644ae1d93074b80f18,
         type: 3}
+      propertyPath: OnBored.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622084667479594159, guid: 470ebbd23d80fd644ae1d93074b80f18,
+        type: 3}
+      propertyPath: OnBored.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622084667479594159, guid: 470ebbd23d80fd644ae1d93074b80f18,
+        type: 3}
       propertyPath: OnDone.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 886346110}
+    - target: {fileID: 2622084667479594159, guid: 470ebbd23d80fd644ae1d93074b80f18,
+        type: 3}
+      propertyPath: OnBored.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 886346110}
+    - target: {fileID: 2622084667479594159, guid: 470ebbd23d80fd644ae1d93074b80f18,
+        type: 3}
+      propertyPath: OnBored.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622084667479594159, guid: 470ebbd23d80fd644ae1d93074b80f18,
+        type: 3}
+      propertyPath: OnBored.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NPCGotBored
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622084667479594159, guid: 470ebbd23d80fd644ae1d93074b80f18,
+        type: 3}
+      propertyPath: OnBored.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 470ebbd23d80fd644ae1d93074b80f18, type: 3}
 --- !u!1001 &1198640473263019614
@@ -1285,9 +1315,39 @@ PrefabInstance:
       objectReference: {fileID: 1101931620}
     - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
         type: 3}
+      propertyPath: OnBored.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: OnBored.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
       propertyPath: OnDone.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 886346110}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: OnBored.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 886346110}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: OnBored.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: OnBored.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NPCGotBored
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963421097349514829, guid: 8f2d87225a6866149958c0333ad83c92,
+        type: 3}
+      propertyPath: OnBored.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2963421097349514831, guid: 8f2d87225a6866149958c0333ad83c92,
         type: 3}
       propertyPath: m_RootOrder
@@ -1419,9 +1479,39 @@ PrefabInstance:
       objectReference: {fileID: 1101931620}
     - target: {fileID: 1190057411603552034, guid: 9dcf73c4f5f56ec42b7364f21d53cc48,
         type: 3}
+      propertyPath: OnBored.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1190057411603552034, guid: 9dcf73c4f5f56ec42b7364f21d53cc48,
+        type: 3}
+      propertyPath: OnBored.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1190057411603552034, guid: 9dcf73c4f5f56ec42b7364f21d53cc48,
+        type: 3}
       propertyPath: OnDone.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 886346110}
+    - target: {fileID: 1190057411603552034, guid: 9dcf73c4f5f56ec42b7364f21d53cc48,
+        type: 3}
+      propertyPath: OnBored.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 886346110}
+    - target: {fileID: 1190057411603552034, guid: 9dcf73c4f5f56ec42b7364f21d53cc48,
+        type: 3}
+      propertyPath: OnBored.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1190057411603552034, guid: 9dcf73c4f5f56ec42b7364f21d53cc48,
+        type: 3}
+      propertyPath: OnBored.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NPCGotBored
+      objectReference: {fileID: 0}
+    - target: {fileID: 1190057411603552034, guid: 9dcf73c4f5f56ec42b7364f21d53cc48,
+        type: 3}
+      propertyPath: OnBored.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1190057411603552035, guid: 9dcf73c4f5f56ec42b7364f21d53cc48,
         type: 3}
       propertyPath: m_Name

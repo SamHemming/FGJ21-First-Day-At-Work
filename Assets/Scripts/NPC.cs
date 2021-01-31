@@ -41,6 +41,7 @@ public class NPC : MonoBehaviour
 
 
 	[SerializeField] private UnityEngine.Events.UnityEvent OnDone;
+	[SerializeField] private UnityEngine.Events.UnityEvent OnBored;
 	[SerializeField] private Vector2Int dialogPanelOffset = Vector2Int.zero;
 
 
@@ -116,7 +117,6 @@ public class NPC : MonoBehaviour
 
 	private void DoneTalking()
 	{
-		Debug.Log("DoneTalking");
 		if (whereWasI < dialogList.Count - 1)
 			talk = StartCoroutine(Talk(dialogList, whereWasI, true));
 		else
@@ -127,7 +127,6 @@ public class NPC : MonoBehaviour
 	private void DoneMoving()
 	{
 		isMoving = false;
-		Debug.Log("DoneMoving");
 		if (whereWasI < dialogList.Count - 1)
 			YourTurn();
 		else
@@ -137,14 +136,14 @@ public class NPC : MonoBehaviour
 
 	private void Done()
 	{
-		Debug.Log("Done");
 		OnDone.Invoke();
+		if (whereWasI != 1000)
+			OnBored.Invoke();
 	}
 
 
 	private void YourTurn()
 	{
-		Debug.Log("YourTurn");
 		talk = StartCoroutine(Talk(dialogList, 0, true));
 	}
 

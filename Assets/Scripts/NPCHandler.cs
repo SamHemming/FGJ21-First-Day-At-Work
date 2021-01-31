@@ -16,9 +16,15 @@ public class NPCHandler : MonoBehaviour
 
 	public UnityEngine.Events.UnityEvent OnLose;
 
-	private void UpdateScore(int value)
+	public void NPCGotBored()
 	{
-		score.text = $"Customer Satisfaction: {value}";
+		customerSatisfaction -= 4;
+		UpdateScore();
+	}
+
+	private void UpdateScore()
+	{
+		score.text = $"Customer Satisfaction: {customerSatisfaction}";
 
 		if(customerSatisfaction <= 0)
 		{
@@ -57,7 +63,8 @@ public class NPCHandler : MonoBehaviour
 		else
 		{
 			npcList[currentNPC].WrongItem();
-			UpdateScore(--customerSatisfaction);
+			--customerSatisfaction;
+			UpdateScore();
 		}
 	}
 
